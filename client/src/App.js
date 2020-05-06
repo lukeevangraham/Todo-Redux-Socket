@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// ./react-redux-client/src/App.js
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import PropTypes from 'prop-types';
+import { syncHistoryWithStore } from 'react-router-redux';
+import configureStore from './store/configureStore';
+import routes from './routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const store = configureStore();
+const history = syncHistoryWithStore(browserHistory, store);
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div>
+          <Router history={history} router={routes} />
+        </div>
+      </Provider>
+    );
+  }
+}
+
+App.propTypes = {
+  store: PropTypes.objectisRequired,
+  history: PropTypes.object.isRequired
 }
 
 export default App;
