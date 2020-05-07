@@ -2,7 +2,7 @@
 import React from "react";
 import { Navbar, Nav, NavItem, MenuItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import "./App.css";
+// import "./App.css";
 
 export default class App extends React.Component {
   constructor(props) {

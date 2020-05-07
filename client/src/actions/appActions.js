@@ -1,7 +1,7 @@
 // ./client/src/actions/appActions.js
 
-export const toggleAddtodo = () => {
+export const toggleAddTodo = () => {
     return {
-        type: 'TOGGLE_ADD_TODO'
+      type: 'TOGGLE_ADD_TODO'
     }
-}
+  }
