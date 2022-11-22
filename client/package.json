@@ -16,7 +16,7 @@
     "react-router": "^3.2.6",
     "react-router-bootstrap": "^0.23.3",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "register-service-worker": "^1.7.1"
